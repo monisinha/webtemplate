@@ -1,0 +1,368 @@
+/* body{
+    background:yellow
+} */
+*{
+    box-sizing:border-box;
+}
+::-webkit-input-placeholder { 
+    color: #B4BBC5;
+}  
+:-ms-input-placeholder { 
+color: #B4BBC5;
+}  
+::placeholder {
+color: #B4BBC5;
+}
+ul {
+list-style: none;
+}
+#root {
+    display: flex;
+    flex-flow: row;
+}
+.spriteIcon{
+    background-image: url(../images/spriteImage.png);
+}
+.sidebar {
+    width: 100px;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.h-logo {
+    width: 100px;
+    height: 98px;
+    background: #016AFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 55px;
+}
+.sidebar ul {
+    padding: 0;
+    list-style: none;
+}
+.sidebar ul li {
+    width: 100%;
+    margin-bottom: 75px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar ul li a{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+    width: 50px;
+    height: 50px;
+}
+
+.home {
+    background-position: -3px -4px;
+}
+.home:hover {
+    background-position: -3px -67px;
+}
+.emp {
+    background-position: -59px -7px;
+}
+.emp:hover {
+    background-position: -59px -67px;
+}
+.stake {
+    background-position: -121px -6px;    
+}
+.stake:hover {
+    background-position: -121px -66px;
+}
+.files {
+    background-position: -173px -3px;
+}
+.files:hover {
+    background-position: -173px -63px;
+}
+header {
+    background: #fff;
+    width: 100%;
+    padding: 5px;
+    float: left;
+    box-shadow: 1px 3px 9px #ccc;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.notification {
+    position: relative;
+}
+.notification a{
+    position: relative;
+}
+.user-profile{
+    color: #4D4F5C;
+    line-height: 32px;
+    font-size: 14px;
+}
+.notification .counter {
+    background-color: #2275FF;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 10px;
+    position: absolute;
+    right: 19px;
+    height: 11px;
+    width: 11px;
+    top:9px;
+    border: 2px solid #fff;
+}
+
+.profile-pic {
+    float: left;
+    margin-right: 5px;
+}
+.navbar i{
+   color: #BCBCCB
+}
+.icons-right {
+    margin-top: 5px;
+    font-size: 20px;
+    padding-bottom: 5px!important;
+    padding-right: 20px!important;
+}
+.search-field {
+    float: left;
+    padding: 10px 20px;
+}
+.search-field input[type="text"] {
+    color: #B4BBC5!important;
+    font-size: 20px;
+    padding: 8px 20px;
+    border:none
+}
+.search-field input[type="text"]:focus {
+    border: none;
+    outline:0px
+}
+.page-container {
+    width: calc(100% - 100px);
+    margin-left: 100px;
+}
+.main-content {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+}
+.left-section {
+    width: calc(100% - 350px);
+    padding: 20px;
+}
+
+.right-section {
+    width: 350px;
+}
+.heading {
+    padding: 40px 30px;
+}
+.heading h2{
+    color: #101C36;
+    font-weight: normal;
+    margin: 0;
+}
+.heading span{
+    color: #aaabbc;
+    font-size: 14px;
+}
+.post-container {
+    padding: 10px 50px;
+}
+.post-list{
+    margin-bottom: 70px;
+}
+.post-list h6 {
+    font-size: 16px;
+    color: #0A1631;
+}
+.date-time {
+    color: #6c7383;
+    font-size: 13px;
+}
+.date-time i{
+    color: #b2b2b2;
+    margin-right: 10px;
+}
+.post-view {
+    display: flex;
+    margin-top: 40px;
+}
+.post-pic {
+    width: calc(100% - 80px);
+}
+.post-pic ul{
+    padding: 0;
+}
+.post-pic li {
+    float: left;
+    margin-left: -17px;
+}
+.post-pic li:first-child {
+    margin: 0;
+}
+.post-pic img {
+    border: 2px solid #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.post-attachment {
+    text-align: right;
+    width: 80px;
+}
+.post-attachment i {
+    color: #ccccd7;
+    font-size: 14px;
+}
+.post-attachment span {
+    color: #9898AE;
+    font-size: 14px;
+}
+.add-more {
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    color: #cbcbd6;
+    border: 1px dashed #cbcbd6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px!important;
+}
+.top-section {
+    display: flex;
+    flex-flow: row;
+    align-content: stretch;
+}
+.welcome-user {
+    width: 50%;
+    background: url(../images/bg-1.png) no-repeat;
+    background-position: right;
+    min-height: 190px;
+    position: relative;
+    margin: 20px;
+    background-size: contain;
+}
+.welcome-text {
+    width: 50%;
+    position: absolute;
+    bottom: 10%;
+}
+.welcome-user h2, .add-card h2{
+    font-size: 22px;
+    color:#1F2734;
+}
+.card-text {
+    position: absolute;
+    bottom: 10%;
+    width: 60%;
+}
+.welcome-user p{
+    font-size: 13px;
+    color:#737985;
+}
+.add-card {
+    width: 50%;
+    background: url(../images/bg-2.png) no-repeat;
+    background-size: contain;
+    background-position: right;
+    position: relative;
+    margin: 20px;    
+    background-size: contain;
+}
+.card-text button {
+    background: #2275FF;
+    color: #fff;
+    border: 0;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.overview-section {
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
+.overview-left-panel {
+    width: 65%;
+    float: left;
+}
+.overview-right-panel{
+    width: 35%;
+    float: right;
+}
+.overview-section > h2 {
+    font-size: 22px;
+}
+.grid-card {
+    width: 46%;
+    float: left;
+    margin: 10px 4% 10px 0;    
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-flow: row;
+}
+.overview-section p {
+    color: #82898f;
+    font-size: 15px;
+}
+.task-statistics {
+    float: left;
+    width: 100%;
+}
+.card-active {
+    background: linear-gradient(45deg, #41e595, #24bfb5);
+}
+.card-upcoming {
+    background: linear-gradient(45deg, #e16cdb, #9f57fc);
+}
+.card-icon {
+    width: 65px;
+    height: 65px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 10px;
+}
+.card-icon img {
+    height: 30px;
+}
+.card-detail {
+    padding: 15px 10px;
+    width: calc(100% - 85px);
+}
+.card-detail h6 {
+    font-size: 15px;
+    font-weight: normal;
+    margin: 5px 0;
+}
+.card-detail span {
+    font-size: 22px;
+}
+a.canvasjs-chart-credit {
+    display: none;
+}
+.overview-left-panel h2, .overview-right-panel  h2 {
+    color: #016AFB;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 25px;
+}

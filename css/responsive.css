@@ -1,0 +1,128 @@
+@media only screen and (min-width:320px) and (max-width:1199px){
+    .sidebar {
+        width:60px;
+    }
+    .h-logo {
+        width: 60px;
+        height: 60px;
+    }
+    .h-logo img {
+        width: 30px;
+    }
+    .page-container {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+    header {
+        padding: 0px;
+    }
+    .search-field img {
+        height: 32px;
+    }
+    .search-field {
+        padding: 3px 20px;
+    }
+    .float-right {
+        padding: 0 10px;
+    }
+    .search-field input[type="text"] {
+        font-size: 15px;
+    }
+    .top-section {
+        flex-flow: column;
+    }
+    .welcome-user {
+        width: 100%;
+    }
+    .add-card {
+        width: 100%;
+        min-height: 190px;
+    }
+    .grid-card {
+        width: 48%;
+    }
+    .card-upcoming {
+        margin-right: 0;
+    }
+    .overview-left-panel, .overview-right-panel {
+        width: 100%;
+        margin-bottom: 20px;
+    }    
+}
+
+
+@media only screen and (min-width:768px) and (max-width:990px){
+    
+    .grid-card {
+        width: 100%!important;
+    }
+    .left-section {
+        width: calc(100% - 300px);
+        padding: 10px;
+    }
+    .right-section {
+        width: 300px;
+    }
+    .heading {
+        padding: 40px 20px;
+    }
+    .post-container {
+        padding: 10px 30px;
+    }
+    .sidebar ul li {
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (min-width:320px) and (max-width:767px){
+    .sidebar {
+        width: 50px;
+    }
+    .h-logo {
+        width: 50px;
+        height: 50px;
+    }
+    .sidebar ul li {
+        margin-bottom: 30px;
+    }
+    .search-field {
+        padding: 3px 10px;
+    }
+    .search-field input[type="text"] {
+        width: 130px;
+        font-size: 13px;
+        padding: 8px 5px;
+    }
+    .search-field img {
+        height: 20px;
+    }
+    .icons-right {
+        padding-right: 15px!important;
+    }
+    ul.navbar-nav {
+        flex-flow: row;
+    }
+    .page-container {
+        width: calc(100% - 50px);
+        margin-left: 50px;
+    }
+    .main-content {
+        flex-flow: column;
+    }
+    .left-section {
+        width: 100%;
+    }
+    .right-section {
+        width: 100%;
+    }
+    .grid-card {
+        width: 100%;
+    }
+    .welcome-user h2, .add-card h2 {
+        font-size: 20px;
+    }
+    .heading h2 {
+        font-size: 25px;
+    }
+}

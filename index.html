@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.js'></script>
+<script type='text/javascript' src='js/highcharts.js'></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  window.onload = function () {  
+  var chartOptions = {
+    animationEnabled: true,
+    data: [{
+      type: "doughnut",
+      innerRadius: "60%",
+      showInLegend: true,
+      legendText: "{label}",
+      indexLabel: "{label}: #percent%",
+      dataPoints: [
+        { label: "Open Documents", y: 20, color: '#6B75FF' },
+        { label: "In Progress", y: 50, color: '#33E4F1' },
+        { label: "Completed", y: 30, color: '#FF6464' }
+      ]
+    }]
+  };
+  $("#pieChartContainer").CanvasJSChart(chartOptions);  
+  }
+
+ 
+</script>
+
+</head>
+<body>  
+  <div id="root">
+    <div class="sidebar">
+      <div class="h-logo">
+        <img src="images/icon-ham.png" alt="logo">
+      </div>
+        <div class="side-nav">
+          <ul>
+            <li><a href="#" class="spriteIcon home"></a></li>
+            <li><a href="#" class="spriteIcon emp"></a></li>
+            <li><a href="#" class="spriteIcon stake"></a></li>
+            <li><a href="#" class="spriteIcon files"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-container">
+        <header>            
+          <div class="nav-area">
+            <div class="search-field">
+              <img src="images/searchIcon.png" alt="">  
+              <input type="text" placeholder="Type in to search...">                      
+            </div>
+            <nav class="navbar navbar-expand-sm navbar-light bg-light float-right"> 
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link icons-right" href="#">
+                    <i class="far fa-life-ring"></i>
+                  </a>
+                </li>
+                <li class="nav-item notification">
+                  <a class="nav-link icons-right" href="#">
+                    <span class="counter"></span> 
+                    <i class="fas fa-bell"></i>
+                  </a> 
+                </li>
+                <li class="nav-item dropdown user-profile">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <div class="profile-pic">
+                      <img src="images/profile-pic.png" alt="Erick">
+                    </div>
+                    Erick Larson 
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+            
+          </div>
+        </header>
+        <main class="main-content">
+          <div class="left-section">
+            <div class="top-section">
+              <div class="welcome-user">
+                  <div class="welcome-text">
+                    <h2>Welcome back Erick!</h2>
+                    <p>I'm a paragraph. Click here to add your own text and edit me.</p>
+                  </div>
+              </div>
+              <div class="add-card">
+                <div class="card-text">
+                  <h2>You haven't added product
+                    titles yet on your cards.</h2>
+                    <button>Add Card</button>
+                </div>
+              </div>
+            </div>
+            <div class="overview-section">
+              <h2>Overview</h2>
+              <p>Here is the complete overview of the data.</p>
+              <div class="overview-left-panel">
+                <div class="grid-card card-active">
+                    <div class="card-icon">
+                      <img src="images/folder.png" alt="">
+                    </div>
+                    <div class="card-detail">
+                      <h6>Active</h6>
+                      <span>121 Products</span>
+                    </div>                    
+                </div>
+                <div class="grid-card card-upcoming">
+                  <div class="card-icon">
+                    <img src="images/cal.png" alt="">
+                  </div>
+                  <div class="card-detail">
+                    <h6>Upcoming</h6>
+                    <span>16 Products</span>
+                  </div>   
+                </div>
+                <div class="task-statistics">
+                  <h2>Team Task Statistics</h2>
+                  <p>User engagement and Task status</p>
+                  <div id="container" style="height: 370px; width: 100%;"></div>
+                </div>
+              </div>
+              <div class="overview-right-panel">
+                <div class="overall-doc">
+                  <h2>Overall Document Completion</h2>
+                  <p>Count of open, inprogress and completed 
+                    documents </p>
+                </div>
+                <div class="pie-chart">
+                  <div id="pieChartContainer" style="height: 370px; width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>             
+          <div class="right-section">
+            <div class="right-section">
+              <div class="heading">
+                <h2>Product Board</h2>
+                <span>Track your products created at one place</span>
+              </div>
+              <div class="post-container">
+                <div class="post-list">
+                  <h6>Marketing Material Review</h6>
+                  <div class="date-time"><i class="fas fa-clock"></i>23 Feb - 26 Feb</div>
+                  <div class="post-view">
+                    <div class="post-pic">
+                      <ul>
+                        <li><img src="images/user-pic-1.png" alt=""></li>
+                        <li><img src="images/user-pic-2.png" alt=""></li>
+                        <li class="add-more"><i class="fas fa-plus"></i></li>
+                      </ul>
+                    </div>
+                    <div class="post-attachment">
+                      <i class="fas fa-paperclip "></i>
+                      <span>2</span>
+                    </div>
+                  </div>
+                </div> 
+                <div class="post-list">
+                  <h6>Marketing Material Review</h6>
+                  <div class="date-time"><i class="fas fa-clock"></i>23 Feb - 26 Feb</div>
+                  <div class="post-view">
+                    <div class="post-pic">
+                      <ul>
+                        <li><img src="images/user-pic-1.png" alt=""></li>
+                        <li><img src="images/user-pic-2.png" alt=""></li>
+                        <li class="add-more"><i class="fas fa-plus"></i></li>
+                      </ul>
+                    </div>
+                    <div class="post-attachment">
+                      <i class="fas fa-paperclip "></i>
+                      <span>2</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-list">
+                  <h6>Marketing Material Review</h6>
+                  <div class="date-time"><i class="fas fa-clock"></i>23 Feb - 26 Feb</div>
+                  <div class="post-view">
+                    <div class="post-pic">
+                      <ul>
+                        <li><img src="images/user-pic-1.png" alt=""></li>
+                        <li><img src="images/user-pic-2.png" alt=""></li>
+                        <li class="add-more"><i class="fas fa-plus"></i></li>
+                      </ul>
+                    </div>
+                    <div class="post-attachment">
+                      <i class="fas fa-paperclip "></i>
+                      <span>2</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-list">
+                  <h6>Marketing Material Review</h6>
+                  <div class="date-time"><i class="fas fa-clock"></i>23 Feb - 26 Feb</div>
+                  <div class="post-view">
+                    <div class="post-pic">
+                      <ul>
+                        <li><img src="images/user-pic-1.png" alt=""></li>
+                        <li><img src="images/user-pic-2.png" alt=""></li>
+                        <li class="add-more"><i class="fas fa-plus"></i></li>
+                      </ul>
+                    </div>
+                    <div class="post-attachment">
+                      <i class="fas fa-paperclip "></i>
+                      <span>2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+  </div>
+<script src="js/jquery.canvasjs.min.js"></script>
+<script>
+   // highchart
+   Highcharts.chart('container', {
+  chart: {
+    type: 'column'
+  },  
+  title: {
+    text: ''
+  },
+  xAxis: {
+    categories: ['01/18', '02/18', '03/18', '04/18', '05/18', '06/18', '07/18', '08/18', '09/18', '10/18', '11/18', '12/18']
+  },
+ 
+  legend: {
+    align: 'center',
+    x: -30,
+    verticalAlign: 'bottom',
+    y: 25,
+    floating: false,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || 'white',
+    borderColor: '#fff',
+    borderWidth: 0,
+    shadow: false
+  },
+  
+  plotOptions: {
+    column: {
+      stacking: 'normal',
+      dataLabels: {
+        enabled: false
+      }
+    }
+  },
+  series: [{
+    color: '#6B75FF',
+    radius: '10',
+    name: 'Engagement',
+    data: [4, 6, 3, 8, 7, 8, 7, 7, 8, 7, 7, 8]
+  }, {
+    color: '#33E4F1',
+    name: 'Task Status',
+    data: [2, 3, 1, 1, 3, 2, 3, 3, 2, 3, 3, 2]
+  }]
+});
+</script>
+</body>
+</html>
