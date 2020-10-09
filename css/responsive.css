@@ -14,7 +14,7 @@
         margin-left: 60px;
     }
     header {
-        padding: 0px;
+        padding: 3px 0px;
     }
     .search-field img {
         height: 32px;
@@ -30,13 +30,14 @@
     }
     .top-section {
         flex-flow: column;
+        padding: 20px;
     }
     .welcome-user {
         width: 100%;
     }
     .add-card {
         width: 100%;
-        min-height: 190px;
+        margin: 60px 0 0 0;
     }
     .grid-card {
         width: 48%;
@@ -51,10 +52,11 @@
 }
 
 
-@media only screen and (min-width:768px) and (max-width:990px){
+@media only screen and (min-width:769px) and (max-width:990px){
     
     .grid-card {
         width: 100%!important;
+        margin-left: 0;
     }
     .left-section {
         width: calc(100% - 300px);
@@ -63,21 +65,25 @@
     .right-section {
         width: 300px;
     }
-    .heading {
-        padding: 40px 20px;
-    }
-    .post-container {
-        padding: 10px 30px;
-    }
+
     .sidebar ul li {
         margin-bottom: 50px;
+    }
+    .bg-img img {
+        width: 180px;
+    }
+    .welcome-user h2, .add-card h2 {
+        font-size: 18px;
     }
 }
 
 
-@media only screen and (min-width:320px) and (max-width:767px){
+@media only screen and (min-width:320px) and (max-width:768px){
     .sidebar {
         width: 50px;
+    }
+    header {
+        padding: 0 0 2px 0px;
     }
     .h-logo {
         width: 50px;
@@ -118,11 +124,39 @@
     }
     .grid-card {
         width: 100%;
+        margin-left: 0;
+    }
+    .welcome-text {
+        width: 60%;
     }
     .welcome-user h2, .add-card h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .heading h2 {
         font-size: 25px;
+    }    
+}
+@media only screen and (min-width:320px) and (max-width:540px){
+    .bg-img img {
+        max-width: 80%;
+        float: right;
+    }
+    .welcome-user, .add-card {        
+        min-height: 130px;
+    }
+    .welcome-user p {
+        font-size: 12px;
+    }
+    .card-text {
+        bottom: 10px;
+    }
+    .search-field {
+        padding: 3px 5px;
+    }
+    .user-profile {
+        font-size: 11px;
+    }
+    .float-right {
+        padding: 0 10px 0 0;
     }
 }

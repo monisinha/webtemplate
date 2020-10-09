@@ -18,8 +18,10 @@ list-style: none;
 }
 #root {
     display: flex;
-    flex-flow: row;
+    flex-flow: row;    
+    background: #fafafd;
 }
+
 .spriteIcon{
     background-image: url(../images/spriteImage.png);
 }
@@ -31,6 +33,7 @@ list-style: none;
     top: 0;
     left: 0;
     z-index: 100;
+    background: #fff;
 }
 .h-logo {
     width: 100px;
@@ -60,7 +63,9 @@ list-style: none;
     width: 50px;
     height: 50px;
 }
-
+.navbar {
+    background: #fff!important;
+}
 .home {
     background-position: -3px -4px;
 }
@@ -164,9 +169,11 @@ header {
 
 .right-section {
     width: 350px;
+    background: #f4f7fe;
+    padding: 40px 30px;
 }
 .heading {
-    padding: 40px 30px;
+    margin-bottom: 30px;
 }
 .heading h2{
     color: #101C36;
@@ -178,10 +185,13 @@ header {
     font-size: 14px;
 }
 .post-container {
-    padding: 10px 50px;
+    float: left;
+    width: 100%;
 }
-.post-list{
-    margin-bottom: 70px;
+.post-list {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
 }
 .post-list h6 {
     font-size: 16px;
@@ -197,7 +207,7 @@ header {
 }
 .post-view {
     display: flex;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .post-pic {
     width: calc(100% - 80px);
@@ -246,42 +256,50 @@ header {
     display: flex;
     flex-flow: row;
     align-content: stretch;
+    margin-top: 30px;
+    padding: 20px;
 }
 .welcome-user {
+    background: #eff6ff;
     width: 50%;
-    background: url(../images/bg-1.png) no-repeat;
-    background-position: right;
-    min-height: 190px;
+    min-height: 160px;
     position: relative;
-    margin: 20px;
-    background-size: contain;
+    margin-right: 1%;
 }
 .welcome-text {
     width: 50%;
     position: absolute;
-    bottom: 10%;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
 }
 .welcome-user h2, .add-card h2{
     font-size: 22px;
     color:#1F2734;
 }
 .card-text {
-    position: absolute;
-    bottom: 10%;
     width: 60%;
+    position: absolute;
+    bottom: 20px;
+    z-index: 9;
+    left: 20px;
 }
 .welcome-user p{
     font-size: 13px;
     color:#737985;
+    margin-bottom: 0;
 }
 .add-card {
-    width: 50%;
-    background: url(../images/bg-2.png) no-repeat;
-    background-size: contain;
-    background-position: right;
+    width: 49%;
     position: relative;
-    margin: 20px;    
-    background-size: contain;
+    background: #eff6ff;
+    min-height: 160px;
+    margin-left: 1%;
+}
+.bg-img {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 .card-text button {
     background: #2275FF;
@@ -298,20 +316,23 @@ header {
     padding: 20px;
 }
 .overview-left-panel {
-    width: 65%;
+    width: 62%;
     float: left;
+    margin-right: 3%;
 }
-.overview-right-panel{
+.overview-right-panel {
     width: 35%;
     float: right;
+    background: #fff;
+    padding: 20px;
+    margin-top: 30px;
 }
 .overview-section > h2 {
     font-size: 22px;
 }
 .grid-card {
-    width: 46%;
-    float: left;
-    margin: 10px 4% 10px 0;    
+    width: 48%;
+    float: left;  
     border-radius: 5px;
     padding: 10px;
     color: #fff;
@@ -325,12 +346,17 @@ header {
 .task-statistics {
     float: left;
     width: 100%;
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
 }
 .card-active {
     background: linear-gradient(45deg, #41e595, #24bfb5);
+    margin: 10px 2% 10px 0;
 }
 .card-upcoming {
     background: linear-gradient(45deg, #e16cdb, #9f57fc);
+    margin: 10px 0 10px 2%;
 }
 .card-icon {
     width: 65px;
@@ -364,5 +390,4 @@ a.canvasjs-chart-credit {
     color: #016AFB;
     font-size: 22px;
     font-weight: bold;
-    margin-top: 25px;
 }
